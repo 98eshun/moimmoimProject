@@ -1,0 +1,217 @@
+/* Web Font Load*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* main 설정 */
+/* 메인페이지 메뉴 공용*/
+.moims_container {
+  width: 1060px;
+  height: 420px;
+  margin: 50px auto;
+}
+.section_header {
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 20px;
+  text-align: left;
+  justify-content: space-between;
+}
+.section_title {
+  display: flex;
+  height: 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  align-items: center;
+  align-content: center;
+  letter-spacing: -1px;
+}
+.green_bar {
+  height: 80%;
+  margin-right: 5px;
+}
+.more_button{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+
+/* popular moim */
+ol,
+ul {
+  list-style: none;
+  margin:0px;
+  padding: 0px;
+}
+.list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+.list figure{
+  width: 100%;
+  align-items:flex-start;
+  width: 345px;
+  height: 268px;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.popular_photo{
+  width: 100%;
+  width: 348px;
+  height: 233px;
+  margin: 3px 0px;
+  border-radius: 10px;
+}
+
+/* MOIM lIST */
+/* MOIM LIST 카테고리 바*/
+
+/* 카테코리 바 */
+/* 탭 버튼 스타일 */
+.tab {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-content: center;
+}
+.tab button {
+  width: 300px;
+  height: 47px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: 0.5px solid lightgray;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+/* 선택된 탭 버튼 스타일 */
+.tab button.active {
+  background:rgb(17, 151, 65);
+  color: white;
+  border: 0.5px solid lightgray;
+}
+/* 탭 컨텐츠 스타일 */
+.tabcontent {
+  display: none;
+  clear: both;
+}
+/* 선택된 탭 컨텐츠 스타일 */
+.tabcontent.active {
+  display: block;
+}
+
+/* 카테고리별 모임 */
+.moim_list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 6px;
+}
+.cat_moim_list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-content: center;
+}
+.cat_moim{
+  width: 260.5px;
+  height: 270px;
+  margin: 5px 0px;
+}
+.cat_moim figure{
+  width: 100%;
+  align-items: flex-start;
+  width: 260.5px;
+  height: 260px;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.photo{
+  width: 260.5px;
+  height: 150px;
+}
+/*
+.moim_title{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  line-height: 25px;
+}
+*/
+
+.moim_info{
+  width: 95%;
+  height: 90px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0px;
+  padding: 5px 10px 5px 0px;
+  grid-template-areas:
+  'moim_location moim_location'
+  'moim_title moim_title'
+  'moim_time moim_time'
+  'moim_price num_of_people';
+}
+
+
+.moim_location{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+  line-height: 20px;
+  grid-area: moim_location;
+}
+.moim_title{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+  line-height: 25px;
+  grid-row: 2/3;
+  grid-column:1/3;
+}
+.moim_time{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+  line-height: 20px;
+  grid-area: moim_time;
+}
+.moim_price{
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(17, 151, 65);
+  line-height: 25px;
+}
+.num_of_people {
+  text-align: right;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/*
+.moim_location, .moim_price, moim_time, num_of_people{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+  line-height: 20px;
+}
+.num_of_people{
+  color:rgb(17, 151, 65);
+}
+*/
